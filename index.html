@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PizzaSales 23</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+           <div class="container">
+            <div class="title-page">
+                <h2>
+                    <span style="color: black;">Dashboard</span> 
+                    <span style="color: blue;">PizzaSales</span>
+                    <span style="color: black;">23</span>
+                </h2>
+            </div>
+           </div>
+        </nav>
+    </header>
+    <!-- Header -->
+
+    <!-- Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="box-wrapper">
+                    <select name="date_order" id="quartal">
+                        <option value="all_quartal">All Kuartal</option>
+                        <option value="K1">K1</option>
+                        <option value="K2">K2</option>
+                        <option value="K3">K3</option>
+                        <option value="K4">K4</option>
+                    </select>
+
+
+             
+                    <select name="category" id="category">
+                        <option value="all" selected>All Category</option>
+                        <option value="Classic">Classic</option>
+                        <option value="Supreme">Supreme</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Veggie">Veggie</option>
+                    </select>
+               
+                    <button id="btn-filter">Filter</button>
+    
+            </div>
+
+            <div class="main-cards">
+                <div class="card">
+                        <div class="card-inner">
+                        <h3>Total Receipt</h3>
+                        <span class="material-symbols-outlined">receipt_long</span>
+                        </div>
+                        <h1 id="total-receipt">0</h1>
+                </div>
+
+                <div class="card">
+                        <div class="card-inner">
+                        <h3>Total Sales</h3>
+                        <span class="material-symbols-outlined">attach_money</span>
+                        </div>
+                        <h1 id="total-sales">0</h1>
+                </div>
+
+                <div class="card">
+                        <div class="card-inner">
+                        <h3>Total Quantity</h3>
+                        <span class="material-symbols-outlined">groups</span>
+                        </div>
+                        <h1 id="total-qty">0</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>Total Type</h3>
+                        <span class="material-symbols-outlined">local_pizza</span>
+                        </div>
+                        <h1 id="total-category">0</h1>
+                </div>
+            </div>
+
+            <div class="charts">
+
+                <div class="charts-card">
+                    <h2 class="chart-title">Statistics of  Most Sales</h2>
+                    <canvas id="salesChart"></canvas>
+                </div>
+
+                <div class="charts-card">
+                    <h2 class="chart-title">Statistics of Time Tagging</h2>
+                    <canvas id="timeTaggingChart"></canvas>
+                </div>
+
+                <div class="charts-card">
+                    <h2 class="chart-title">Statistics of Best Tagging</h2>
+                    <canvas id="bestTaggingChart" ></canvas>
+                </div>
+
+                <div class="charts-card">
+                    <h2 class="chart-title">Statistics of  Most Sales</h2>
+                    <table id="order-list" class="display responsive bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date Order</th>
+                                <th>Pizza Name</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Content -->
+
+    <!-- footer -->
+    <footer class="footer-wrapper">
+        <div class="container">
+            <h4>Copyright &copy; 2024 - Team 23</h4>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- Scripts -->
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <!-- Datatables -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+   
+</body>
+</html>
+
